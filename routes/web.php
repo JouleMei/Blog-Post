@@ -2,6 +2,7 @@
 
 use App\Models\Post;
 use Illuminate\Support\Facades\Route;
+use Spatie\YamlFrontMatter\YamlFrontMatter;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,9 +17,14 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-    return view('posts', [
-        'posts' => Post::all()
-    ]);
+    $document = YamlFrontMatter::parseFile(
+        resource_path('posts/my-first-post.html')
+    );
+
+    ddd($document);
+ //   return view('posts', [
+ //       'posts' => Post::all()
+ //   ]);
 });
 
 
