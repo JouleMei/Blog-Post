@@ -7,7 +7,9 @@
     <h1 class="head1";>MY PERSONAL BLOG</h1>
     <?php foreach ($posts as $post) : ?>
         <article>
-            <?= $post; ?>
+            <h1>
+                <?= $post->Title; ?>
+            </h1>
         </article>
     <?php endforeach; ?>
 </body>

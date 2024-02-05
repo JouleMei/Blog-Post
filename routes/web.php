@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Post;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Route;
 use Spatie\YamlFrontMatter\YamlFrontMatter;
 
@@ -17,16 +18,25 @@ use Spatie\YamlFrontMatter\YamlFrontMatter;
 
 
 Route::get('/', function () {
-    $document = YamlFrontMatter::parseFile(
-        resource_path('posts/my-first-post.html')
-    );
+    $files = File::files(resource_path("posts"));
+    $posts = [];
 
-    ddd($document);
- //   return view('posts', [
- //       'posts' => Post::all()
- //   ]);
+    foreach ($files as $file) {
+        $document = YamlFrontMatter::parseFile($file);
+
+        $posts[] = new Post(
+            $document->Title,
+            $document->Excerpt,
+            $document->Date,
+            $document->body(),
+        );
+    }
+
+    return view('posts', [
+        'posts' => $posts
+    ]);
+
 });
-
 
 Route::get('post/{post}', function ($slug) {
     return view('post', [
