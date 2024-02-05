@@ -8,7 +8,7 @@
     <?php foreach ($posts as $post) : ?>
         <article>
             <h1>
-                <?= $post->Title; ?>
+                <?= $post; ?>
             </h1>
         </article>
     <?php endforeach; ?>
