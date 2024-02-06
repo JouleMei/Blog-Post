@@ -8,8 +8,19 @@
     <?php foreach ($posts as $post) : ?>
         <article>
             <h1>
-                <?= $post; ?>
+                <a href="/posts/<?= $post->slug; ?>">
+                <?= $post->title; ?>
+                </a>
             </h1>
+
+            <div>
+                <?= $post->excerpt; ?>
+            </div>
         </article>
     <?php endforeach; ?>
 </body>
+<footer>
+    <div class="footer">
+        <p>&copy 2024 Joule Mei Blog</p>
+    </div>
+</footer>

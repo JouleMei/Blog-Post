@@ -9,5 +9,7 @@
         <?= $post; ?>
     </article>
 
-    <a href="/">Go Back</a>
+    <a href="/">
+        Go Back
+    </a>
 </body>
