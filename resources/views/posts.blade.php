@@ -13,7 +13,7 @@
                 </a>
             </h1>
 
-            <div>
+            <div style="line-height: 1.7;">
                 <?= $post->excerpt; ?>
             </div>
         </article>
