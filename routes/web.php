@@ -18,21 +18,8 @@ use Spatie\YamlFrontMatter\YamlFrontMatter;
 
 
 Route::get('/', function () {
-    $posts = collect(File::files(resource_path("posts")))
-        ->map(function ($file) {
-            $document = YamlFrontMatter::parseFile($file);
-
-            return new Post(
-                $document->Title,
-                $document->Excerpt,
-                $document->Date,
-                $document->body(),
-                $document->Slug
-            );
-        });
-
     return view('posts', [
-        'posts' => $posts
+        'posts' => Post::all()
     ]);
 });
 
@@ -41,4 +28,3 @@ Route::get('posts/{post}', function ($slug) {
         'post' => Post::find($slug)
     ]);
 })->where('post', '[A-z_\-]+');
-
