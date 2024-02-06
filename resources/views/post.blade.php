@@ -6,7 +6,11 @@
 <body>
     <h1 class="head1";>MY PERSONAL BLOG</h1>
     <article>
-        <?= $post; ?>
+        <h1><?= $post->title; ?></h1>
+
+        <div>
+            <?= $post->body; ?>
+        </div>
     </article>
 
     <a href="/">
