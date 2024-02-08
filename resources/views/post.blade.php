@@ -6,10 +6,10 @@
 <body>
     <h1 class="head1";>MY PERSONAL BLOG</h1>
     <article>
-        <h1><?= $post->title; ?></h1>
+        <h1>{{ $post->title }}</h1>
 
         <div>
-            <?= $post->body; ?>
+            {!! $post->body !!}
         </div>
     </article>
 
