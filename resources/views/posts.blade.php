@@ -21,6 +21,6 @@
 </body>
 <footer>
     <div class="footer">
-        <p>&copy 2024 Joule Mei Blog</p>
+        <p>&copy 2024 Blog-Post</p>
     </div>
 </footer>
