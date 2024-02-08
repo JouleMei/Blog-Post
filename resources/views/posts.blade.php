@@ -1,5 +1,9 @@
 @extends ('layout')
 
+@section('banner')
+    <h1>MY PERSONAL BLOG</h1>
+@endsection
+
 @section ('content')
     @foreach ($posts as $post)
         <article>
