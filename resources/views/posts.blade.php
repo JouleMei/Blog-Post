@@ -9,12 +9,12 @@
         <article>
             <h1>
                 <a href="/posts/<?= $post->slug; ?>">
-                <?= $post->title; ?>
+                {{ $post->title }}
                 </a>
             </h1>
 
             <div style="line-height: 1.7;">
-                <?= $post->excerpt; ?>
+                {{ $post->excerpt }}
             </div>
         </article>
     <?php endforeach; ?>
