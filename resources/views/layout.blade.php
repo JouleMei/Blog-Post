@@ -9,8 +9,8 @@
     </header>
 
     @yield('content')
-
-    <footer>
-        @yield('footer')
-    </footer>
 </body>
+
+<footer>
+    @yield('footer')
+</footer>
