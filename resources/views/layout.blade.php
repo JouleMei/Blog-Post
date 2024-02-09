@@ -9,4 +9,8 @@
     </header>
 
     @yield('content')
+
+    <footer>
+        @yield('footer')
+    </footer>
 </body>
