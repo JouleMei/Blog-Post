@@ -1,7 +1,10 @@
 @extends ('layout')
 
 @section('banner')
-    <h1>MY PERSONAL BLOG</h1>
+        <h1 style>
+            MY PERSONAL BLOG
+        </h1>
+
 @endsection
 
 @section ('content')
