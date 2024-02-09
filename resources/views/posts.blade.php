@@ -22,3 +22,9 @@
         </article>
     @endforeach
 @endsection
+
+@section('footer')
+        <p>
+            &copy 2024
+        </p>
+@endsection
