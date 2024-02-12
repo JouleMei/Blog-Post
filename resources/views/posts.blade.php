@@ -1,13 +1,4 @@
-@extends ('layout')
-
-@section('banner')
-        <h1>
-            MY PERSONAL BLOG
-        </h1>
-
-@endsection
-
-@section ('content')
+<x-layout>
     @foreach ($posts as $post)
         <article>
             <h1>
@@ -16,15 +7,9 @@
                 </a>
             </h1>
 
-            <div style="line-height: 1.7;">
+            <div>
                 {{ $post->excerpt }}
             </div>
         </article>
     @endforeach
-@endsection
-
-@section('footer')
-        <p>
-            &copy 2024
-        </p>
-@endsection
+</x-layout>
