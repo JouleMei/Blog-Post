@@ -8,7 +8,7 @@
         @yield('banner')
     </header>
 
-    @yield('content')
+    {{ $content }}
 </body>
 
 <footer>
