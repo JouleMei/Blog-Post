@@ -23,11 +23,8 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('posts/{post}', function ($id) {
-    $post = Post::find($id);
-
+Route::get('posts/{post}', function (Post $post) {
     return view('post', [
-        'post' => Post::findOrFail($id)
+        'post' => $post
     ]);
-})
-;
+});
