@@ -2,6 +2,7 @@
     <article>
         <h1>
             {{ $post->title }}
+            {{ $post->year}}
         </h1>
 
         <div>
