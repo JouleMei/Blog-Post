@@ -29,3 +29,7 @@ footer {
     text-align: center;
     font-style: italic;
 }
+
+div {
+    line-height: 1.5;
+}
