@@ -3,7 +3,7 @@
         <article>
             <h1>
                     {!! $post->title !!}
-                    {!! $post->year !!}
+                    ({!! $post->year !!})
             </h1>
 
             <div>
