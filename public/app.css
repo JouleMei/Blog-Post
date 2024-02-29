@@ -1,6 +1,6 @@
 body {
-    background: rgb(231, 250, 255);
-    color: rgb(19, 8, 113);
+    background: #e7b7b8;
+    color: rgb(66, 6, 6);
     max-width: 800px;
     font-family: sans-serif;
     margin: auto;
@@ -8,6 +8,7 @@ body {
 
 p {
     line-height: 1.7;
+    color:rgb(246, 246, 246);
 }
 
 header {
@@ -19,7 +20,7 @@ header {
 
 article + article {
     margin-top: 2rem;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid rgb(66, 6, 6);
     padding-top: 1rem;
 }
 
