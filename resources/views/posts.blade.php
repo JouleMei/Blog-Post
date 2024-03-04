@@ -2,15 +2,17 @@
     @foreach ($posts as $post)
         <article>
             <h1>
-                    {!! $post->title !!}
-                    ({!! $post->year !!})
+                {!! $post->title !!}
+                ({!! $post->year !!})
             </h1>
+
+            <h4>
+                <a href="#">{{  $post->category->name }}</a>
+            </h4>
 
             <div>
                 {{ $post->excerpt }}
             </div>
-
-            <a href="#">{{  $post->category->name }}</a>
 
             <p>
                 <a href="/posts/{{ $post->slug }}">
