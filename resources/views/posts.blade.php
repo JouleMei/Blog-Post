@@ -10,6 +10,8 @@
                 {{ $post->excerpt }}
             </div>
 
+            <a href="#">{{  $post->category->name }}</a>
+
             <p>
                 <a href="/posts/{{ $post->slug }}">
                     Read more
